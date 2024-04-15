@@ -1,0 +1,20 @@
+.btn {
+    color: var(--primary-color);
+    background: var(--black-color);
+  
+    margin: 0.3rem;
+    padding: 0.4rem;
+  
+    border: 0;
+    border-radius: 8px;
+  
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: 0.25px;
+    text-align: center;
+  
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
