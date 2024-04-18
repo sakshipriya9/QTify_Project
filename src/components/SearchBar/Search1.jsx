@@ -4,13 +4,16 @@ import './SearchBar.css';
 import { Search } from '@mui/icons-material';
 
 export default function Search1({ className, data }) {
-  const [values, setValues] = useState('');
+  const [values, setValues] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
+  // console.log(data);
+
   const handleChange = (e) => {
+    // console.log(e.target.value);
     setValues(e.target.value);
   };
 
@@ -18,7 +21,7 @@ export default function Search1({ className, data }) {
     title: option.title,
     image: option.image,
     follows: option.follows,
-  })) : [];
+  })) : [];  
 
   return (
     <form onSubmit={handleSubmit}>
@@ -30,11 +33,12 @@ export default function Search1({ className, data }) {
           disableClearable
           options={menuList}
           getOptionLabel={(option) => option.title}
+      
           renderInput={(params) => (
             <TextField
               {...params}
               label="Search a song of your choice"
-              placeholder="Search"
+              placeholder="search a song| search a album / search an album/i"
               InputProps={{
                 ...params.InputProps,
                 type: 'search',
