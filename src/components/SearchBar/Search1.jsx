@@ -2,19 +2,15 @@ import { Autocomplete, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import './SearchBar.css';
 import { Search } from '@mui/icons-material';
-// import MenuItem from '../MenuItem/MenuItem';
 
 export default function Search1({ className, data }) {
-  const [values, setValues] = useState(null);
+  const [values, setValues] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
-  // console.log(data);
-
   const handleChange = (e) => {
-    // console.log(e.target.value);
     setValues(e.target.value);
   };
 
@@ -22,7 +18,7 @@ export default function Search1({ className, data }) {
     title: option.title,
     image: option.image,
     follows: option.follows,
-  })) : [];  
+  })) : [];
 
   return (
     <form onSubmit={handleSubmit}>
@@ -34,19 +30,11 @@ export default function Search1({ className, data }) {
           disableClearable
           options={menuList}
           getOptionLabel={(option) => option.title}
-        //   renderOption={(props, option) => (
-        //     <MenuItem
-        //       {...props}
-        //       key={option.id}
-        //       title={option.title}
-        //       image={option.image}
-        //       follows={option.follows}
-        //     />
-        //   )}
           renderInput={(params) => (
             <TextField
               {...params}
               label="Search a song of your choice"
+              placeholder="Search"
               InputProps={{
                 ...params.InputProps,
                 type: 'search',
