@@ -18,11 +18,11 @@ export default function Search1({ className, data }) {
     setValues(e.target.value);
   };
 
-//   const menuList = data.map((option) => ({
-//     title: option.title,
-//     image: option.image,
-//     follows: option.follows,
-//   }));
+  const menuList = data ? data.map((option) => ({
+    title: option.title,
+    image: option.image,
+    follows: option.follows,
+  })) : [];  
 
   return (
     <form onSubmit={handleSubmit}>
@@ -32,7 +32,7 @@ export default function Search1({ className, data }) {
           freeSolo
           id="free-solo-2-demo"
           disableClearable
-        //   options={menuList}
+          options={menuList}
           getOptionLabel={(option) => option.title}
         //   renderOption={(props, option) => (
         //     <MenuItem
