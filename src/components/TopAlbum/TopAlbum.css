@@ -1,0 +1,42 @@
+.topAlbum{
+    width: 100vw;
+    /* border: 1px solid red; */
+  }
+  .topAlbum_static {
+    display: flex;
+    align-items: baseline;
+    padding: 12px;
+    justify-content: space-between;
+  }
+  .topAlbum_static > button {
+      width: 120px;
+      height: 30px;
+      font-weight: 600;
+      font-size: 20px;
+      background-color: var(--black-color);
+      color: var(--primary-color);
+      
+      border: none;
+      /* border: 1px solid red; */
+  }
+  .topAlbum_static > button:hover{
+    cursor: pointer;
+  }
+  .topAlbum_static > h3 {
+    width: 130px;
+    height: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--white-color);
+    /* cursor: pointer; */
+    border: none;
+  }
+  .topAlbum_cards{
+      display: flex;
+      
+      
+      /* justify-content: space-between; */
+      /* flex-shrink: 1; */
+      /* flex-wrap: wrap; */
+  }
