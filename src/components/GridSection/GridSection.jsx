@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './GridSection.module.css';
 import { Box } from '@mui/material';
-// import { CircularProgress } from '@mui/material';
 import Card from '../Card/Card';
-// import Carousel from '../Carousel/Carousel';
-// import Filter from '../Filter/Filter';
 import CardSkeleton from '../CardSkeleton/CardSkeleton';
 
 const GridSection = ({ title, data, type }) => {
@@ -60,7 +57,7 @@ const GridSection = ({ title, data, type }) => {
         <Box sx={{ display: 'flex', gap: '20px' }}>
           {/* <CircularProgress /> */}
           {Array.from(new Array(1)).map((item, i) => (
-            <CardSkeleton />
+            <CardSkeleton key={i}/>
           ))}
         </Box>
       ) : (

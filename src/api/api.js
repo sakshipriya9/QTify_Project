@@ -14,4 +14,5 @@ export const fetchData = async (endpoint) => {
 
 export const fetchTopAlbums = async () => fetchData("/albums/top");
 export const fetchNewAlbums = async () => fetchData("/albums/new");
-export const fetchSongs = async () => fetchData("/songs");
+// export const fetchSlugAlbums = async (slug) => fetchData(`/albums/${slug}`);
+// export const fetchSongs = async () => fetchData("/songs");

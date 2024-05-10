@@ -3,10 +3,10 @@ import styles from './Card.module.css';
 import { Chip, Tooltip } from '@mui/material';
 
 const Card = ({ data, type }) => {
+  console.log("Card Data:", data);
   const getCard = (type) => {
     switch (type) {
       case 'album': {
-        // eslint-disable-next-line no-unused-vars
         const { image, follows, title, slug, songs } = data;
         return (
           <Tooltip title={`${songs.length} songs`} placement="top" arrow>
