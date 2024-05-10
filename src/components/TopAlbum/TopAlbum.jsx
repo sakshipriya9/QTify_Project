@@ -63,14 +63,14 @@ const TopAlbum = () => {
           // Determine whether to display the card based on the collapse view
           if (collapseView && index < 6) {
             return (
-              <Grid item xs={2}>
-                <Card key={id} data={albumItem} type="normal" />
+              <Grid item xs={2} key={id}>
+                <Card data={albumItem} type="normal" />
               </Grid>
             );
           } else if (!collapseView) {
             return (
-              <Grid item xs={2}>
-                <Card key={id} data={albumItem} type="normal" />
+              <Grid item xs={2} key={id}>
+                <Card data={albumItem} type="normal" />
               </Grid>
             );
           } else {
